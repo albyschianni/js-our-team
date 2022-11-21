@@ -7,60 +7,56 @@ const teamMeamber = [
     {
         "nameMember" : "Wayne Burnett",
         "role" : "Fouder & CEO",
-        "image" : "image-wayne"
+        "image" : "img/wayne-barnett-founder-ceo.jpg"
     },
     {
         "nameMember" : "Angela Caroll",
         "role" : "Chief Editor",
-        "image" : "image-angela"
+        "image" : "img/angela-caroll-chief-editor.jpg"
     },
     {
         "nameMember" : "Walter Gordon",
         "role" : "Office Manager",
-        "image" : "image-walter"
+        "image" : "img/walter-gordon-office-manager.jpg"
     },
     {
         "nameMember" : "Angela Lopez",
         "role" : "Social Media Manager",
-        "image" : "image-angela L"
+        "image" : "img/angela-lopez-social-media-manager.jpg"
     },
     {
         "nameMember" : "Scott Estrada",
         "role" : "Developer",
-        "image" : "image-scott"
+        "image" : "img/scott-estrada-developer.jpg"
     },
     {
         "nameMember" : "Barbara Ramos",
         "role" : "Graphic Designer",
-        "image" : "image-barbara"
+        "image" : "img/barbara-ramos-graphic-designer.jpg"
     }
 ]
 console.log(teamMeamber);
 
-function createElementFromHTML(htmlString) {
-    div.innerHTML = htmlString.trim();
+cards();
+function cards () {
+
+    for (let i = 0; i< teamMeamber.length; i++){
+
+        let nuovacard = `
+        <div class="scheda">
+            <img src="${teamMeamber[i].image}" alt="">
+            <div id="persona">
+                <div>${teamMeamber[i].nameMember}</div>
+                <div>${teamMeamber[i].role}</div>
+            </div>
+        </div>
+        `
+
+        const container = document.querySelector("#container-schede").innerHTML += nuovacard;
+    }
 }
 
-const addToDom = function ({
-    return createElementFromHTML(`
-    
-        <div class="nome${nameMember}">
-        <div class="ruolo${role}">
-    `)
-    {
-        nameMember,
-        role,
-        image
-    }
-})
 
-// function render (){
-//     return createElementFromHTML(`
-    
-//         <div class="nome${nameMember}">
-//         <div class="ruolo${role}">
-//     `)
-// }
 
 document.querySelector("#container-schede").appendChild
 
@@ -68,3 +64,29 @@ document.querySelector("#container-schede").appendChild
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+
+
+
+
+
+
+
+
+// function createElementFromHTML(htmlString) {
+//     div.innerHTML = htmlString.trim();
+// }
+
+// const addToDom = function render(){
+//     nameMember,
+//     role
+//     {return createElementFromHTML(`
+    
+//         <div class="nome${nameMember}">
+//         <div class="ruolo${role}">
+//     `)}
+// }
+
+// const scheda1 = function render() {
+//     addToDom(teamMeamber);
+// }
