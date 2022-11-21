@@ -42,20 +42,27 @@ function createElementFromHTML(htmlString) {
 }
 
 const addToDom = function ({
-    nameMember,
-    role,
-    image
-}) {
-
-function render (){
     return createElementFromHTML(`
     
         <div class="nome${nameMember}">
         <div class="ruolo${role}">
     `)
-}
-}
-document.querySelector("#container-schede").appendChild(render())
+    {
+        nameMember,
+        role,
+        image
+    }
+})
+
+// function render (){
+//     return createElementFromHTML(`
+    
+//         <div class="nome${nameMember}">
+//         <div class="ruolo${role}">
+//     `)
+// }
+
+document.querySelector("#container-schede").appendChild
 
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
