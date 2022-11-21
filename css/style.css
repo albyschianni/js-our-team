@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#container-schede {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.scheda{
+    width: calc((100% / 3) - 10px);
+    background-color: bisque;
+    margin-bottom: 10px;
+}
+img {
+    width: 100%;
+}
